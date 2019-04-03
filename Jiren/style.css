@@ -1,0 +1,159 @@
+/* --- RESET CSS --- */
+body{
+  margin: 0;
+}
+h1,h2,h3,h4,p,ul,div,span{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-weight: 100;
+}
+*{
+  box-sizing: border-box;
+}
+/* --- FIN RESET --- */
+
+/* --- FONT FACE --- */
+@font-face {
+  font-family: "Marston";
+  src: url("fonts/Marston.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Marston";
+  src: url("fonts/Marston-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+/* --- FIN FONT FACE --- */
+
+body{
+  font-family: "Marston", sans-serif;
+  overflow: hidden;
+  background-color: #282828;
+}
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+section {
+  position: relative;
+  width: 65vw;
+  color: white;
+}
+article {
+  position: absolute;
+  height: 80%;
+  width: 100%;
+  margin-top: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;  
+  font-size: 22px; 
+  transition: transform 0.5s ease-in-out;
+}
+.moved {
+  transform: translateY(1000px);
+}
+article h2 {
+  font-size: 40px;
+}
+article p {
+  max-width: 70%;
+}
+.character iframe{
+  height: 60%;
+  width: 65%;
+}
+.history {
+  height: 50%;
+}
+.buy {
+  height: 15%;
+}
+nav {
+  position: relative;
+  top: 40px;
+  color: white;
+  width: 100%;
+  font-size: 30px;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+nav ul li{
+  transition: color 0.2s ease-in-out;
+}
+nav ul li:hover {
+  color: red;
+  cursor: pointer;
+}
+aside {
+  position: relative;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 35vw;
+  background-color: red;
+  color: white;
+  transition: transform 0.8s ease-in-out;
+}
+aside h2 {
+  position: absolute;
+  color: #282828;
+  font-size: 50px;
+  transform-origin: 0 0; 
+  transform: rotate(90deg) translateY(-80%) translateX(50px);
+  white-space: nowrap;
+  transition: transform 0.8s ease-in-out;
+}
+aside p {
+  position: absolute;
+  width: 60%;
+  font-size: 28px;
+  text-align: left;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 5%;
+  transition: transform 0.8s ease-in-out;
+}
+aside img {
+  position: absolute;
+  max-width: 90%;
+  bottom: 0;
+  left: 10%;
+  transition: transform 0.8s ease-in-out;
+}
+.selected {
+  color: red;
+}
+button {
+  background-color: red; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 10px ;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Marston";
+  font-size: 30px;
+}
+button:hover {
+  cursor: pointer;
+}
+.is-up {
+  transform: rotate(90deg) translateY(-80%) translateX(-1000px);
+}
+.is-right {
+  transform: translateX(1000px);
+}
+.is-btm {
+  transform: translateY(1000px);
+}
